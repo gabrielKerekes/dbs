@@ -1,3 +1,0 @@
-dbs
-===
-chacha prvy krat
