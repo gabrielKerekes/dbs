@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6B5A8CDB-D96D-31B5-531A-ABA69EFC9437" name="PRIESTUPOK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 13:50:36 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<engineerTo>
+<item key="C457BCD6-C8F0-297F-0663-F2D9EB2D3C4E" value="true"/>
+<item key="4C6F4AAA-EDAD-3955-E258-F382CC3BE772" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Attribute_1" id="4080C423-11BC-1DD4-7646-BD64206CB44D">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 13:50:41 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<engineerTo>
+<item key="C457BCD6-C8F0-297F-0663-F2D9EB2D3C4E" value="true"/>
+<item key="4C6F4AAA-EDAD-3955-E258-F382CC3BE772" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+</attributes>
+</Entity>

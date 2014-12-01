@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="44CBCCEF-61AD-3525-C3BA-73DFB558C88B" name="BLOK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>A38FD62D-0562-DAA0-6B9F-B1D3873F6746</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="3A1CEEC4-90D3-484A-2D70-BD08182005F1">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>85748287-CC2C-3618-D92E-615FF4F542EB</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAZOV" id="9016527C-CBDF-AC75-843C-F2F0277F78D0">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>82A011C7-2923-E90D-DE65-C7D760027931</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="POCET_CIEL" id="FAE0A4AE-1A30-E1C6-8131-6B95B6A36688">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>0C1BB5C5-288C-4FCC-2A09-A539AF5DA37A</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BLOK" id="7AEE47B6-F138-654E-9442-F37032B8450D">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>102318C8-5AC7-8854-3A81-FDD3AF272556</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OBSADENOST" id="DE93495F-3C90-9EAB-3207-3418372C9347">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>CF6D1DAB-86E8-5F47-17B8-3E7470231B57</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="KAPACITA" id="C3532A3C-3882-0619-E054-3F98B86F8407">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>74442746-FE5D-9630-8661-897DECD6845A</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UROVEN_STRAZENOSTI" id="E1BEC4F1-4E3E-9612-EFE2-1E715EA829DB">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>BD45FEDB-216C-81C2-931C-7CD3EA04DB44</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E6EC3307-66E0-3F86-0EAF-47A4C61CEF55" name="BLOK_PK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>105767EC-BB87-DF79-A5FE-2C3646DEFCFA</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A1CEEC4-90D3-484A-2D70-BD08182005F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

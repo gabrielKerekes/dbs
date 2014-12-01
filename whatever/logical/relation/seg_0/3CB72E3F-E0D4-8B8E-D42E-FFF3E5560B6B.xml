@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="VAZEN_CELA" directorySegmentName="seg_0" id="3CB72E3F-E0D4-8B8E-D42E-FFF3E5560B6B">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 13:53:35 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<engineerTo>
+<item key="C457BCD6-C8F0-297F-0663-F2D9EB2D3C4E" value="true"/>
+<item key="4C6F4AAA-EDAD-3955-E258-F382CC3BE772" value="true"/>
+</engineerTo>
+<targetPk>FC4EC989-EA89-EE3E-AD90-62C9C99A94B3</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>45274A46-3895-5E1B-3C19-FFA314434D17</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>F76A9967-19C3-B603-333E-E0FAF9B58C8C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

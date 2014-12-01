@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CC4AB1A0-5F9C-963C-627D-812BB6E98EEA" name="VAZEN_PRIESTUPOK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Väzeň_ID" id="89FAC263-96C4-8FDA-FD72-39DE46C019AE">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<use>0</use>
+<delegate>9F27FFCC-CCCE-B662-000F-1685C2BAA469</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D6A98ED4-3C5E-7C31-3A0F-3373E53C6C76" referredColumn="9F27FFCC-CCCE-B662-000F-1685C2BAA469"/>
+</associations>
+</Column>
+<Column name="PRIESTUPOK_PRIESTUPOK_ID" id="3B36C56B-0755-7768-6D85-2C8E1717F56E">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>F7963B6D-EC96-D231-236F-F48318878FAF</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="514BFC0C-E575-F917-C282-C00833B187A9" referredColumn="F7963B6D-EC96-D231-236F-F48318878FAF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="384AACE8-2142-6364-3B62-898BFBC74F54" name="VAZEN_PRIESTUPOK_PK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="89FAC263-96C4-8FDA-FD72-39DE46C019AE"/>
+<colUsage columnID="3B36C56B-0755-7768-6D85-2C8E1717F56E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EEB3F314-9CB6-145E-177E-6A990481207D" name="FK_ASS_10">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>D9725A92-5C1B-A14F-F11F-EDACD39E0B7C</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="89FAC263-96C4-8FDA-FD72-39DE46C019AE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EF2EB4D0-6B66-101B-90FE-85EFFAAD96D9" name="FK_ASS_11">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>D9725A92-5C1B-A14F-F11F-EDACD39E0B7C</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B36C56B-0755-7768-6D85-2C8E1717F56E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

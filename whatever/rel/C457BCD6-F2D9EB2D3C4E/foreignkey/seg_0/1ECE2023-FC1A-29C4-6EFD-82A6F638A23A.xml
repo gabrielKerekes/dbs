@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1ECE2023-FC1A-29C4-6EFD-82A6F638A23A" name="Väzeň_POSTA_FK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>40013349-B0AA-B31C-0056-A20007B77783</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<containerWithKeyObject>3730EBD7-6955-57FB-1BCF-DBFDE8FEB778</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>B4A35F43-DECB-E832-296E-2EA9AE9FEC88</localFKIndex>
+<keyObject>24072704-3714-F6F7-9BE5-6814C8DC46EA</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

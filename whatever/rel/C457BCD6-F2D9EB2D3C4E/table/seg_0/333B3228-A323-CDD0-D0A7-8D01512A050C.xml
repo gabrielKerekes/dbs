@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="333B3228-A323-CDD0-D0A7-8D01512A050C" name="DOZORCA">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>AF2B1FE9-349D-F6D5-8CDF-977E06FA66A9</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="6F474C24-67E0-99B8-128E-69486B64C368">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>5AC8BD20-F82C-4508-E018-B64D917EE871</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MENO" id="75880C48-2107-1FEC-0F78-13D4709A7189">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>2483B4B5-46BF-39ED-D339-82C603CF0A6E</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRIEZVISKO" id="9704C7F2-717C-BB10-D2F8-6A5D9DAC61F5">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>984790F8-3A1B-2348-812F-32A6F9723C6F</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BLOK" id="C7BD2318-27E6-3DE3-4B01-A060DA2DC6A7">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>1449CD75-54B6-8AE9-B64F-B4B9CECDE7DC</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HODNOST" id="112B5C3A-0E00-4F4B-7A26-53FCB2827D3D">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>F9C324B9-55C6-9613-CC2E-5F41C914B6D4</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PLAT" id="468DABA6-2018-FF8C-EC17-45101AEF3440">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>6290486A-BA65-8A68-10E3-8B556351D164</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ODMENY" id="855D0EF5-116D-E87F-D90A-62234AA34562">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>39210564-05C2-8509-0425-640B3CA7A84A</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HODNOST_ID" id="4193869D-0703-3494-4DF9-AE019031C9C3">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>52102DE7-01B4-4793-CC3F-BCE2B580E917</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<use>0</use>
+<delegate>21865DD9-EF2C-9309-5FD4-725E7A7F98C3</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="75850FC0-3982-F3B0-FF0F-772AE66B2750" referredColumn="21865DD9-EF2C-9309-5FD4-725E7A7F98C3"/>
+</associations>
+</Column>
+<Column name="Attribute_1" id="1B11F9EC-A88E-F4D6-7FA5-BC8C71A2328B">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>B06DC835-5CEE-5869-FB6A-04CCC67AC919</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<use>0</use>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BLOK_ID" id="95DC770B-6C0C-C816-693B-792B6CB5559F">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>A4B5A5AC-BA6B-C37B-438E-DC906F2E948D</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<use>0</use>
+<delegate>3A1CEEC4-90D3-484A-2D70-BD08182005F1</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="17276DA6-5D5F-9BD0-5564-403FA679C256" referredColumn="3A1CEEC4-90D3-484A-2D70-BD08182005F1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5E3A606E-6B60-A966-1667-B69F53323CF8" name="DOZORCA_PK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>4A25D10F-4F5A-472F-9A30-9608A1A4E3BD</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F474C24-67E0-99B8-128E-69486B64C368"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="81919212-8E92-5BBF-D458-2631F2CE66A8" name="DOZORCA_BLOK_FK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>33108D91-C00A-345A-9B63-CEBFFDCEC1FD</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95DC770B-6C0C-C816-693B-792B6CB5559F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D7705545-66F9-D0FB-9652-4494F35BFDF0" name="DOZORCA_HODNOST_FK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>5FCC2439-A968-AC6A-EB24-B397618BAA4F</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4193869D-0703-3494-4DF9-AE019031C9C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

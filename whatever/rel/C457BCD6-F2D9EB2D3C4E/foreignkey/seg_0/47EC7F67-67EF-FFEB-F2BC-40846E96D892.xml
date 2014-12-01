@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="47EC7F67-67EF-FFEB-F2BC-40846E96D892" name="CELA_BLOK_FK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>556A3040-CA0A-4FBC-D3F7-8EF6AE01DBC4</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<containerWithKeyObject>1FE6413C-0CB4-5C4C-0908-AFBFE4858206</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>6F061413-04F4-0260-8544-54340DAE1B89</localFKIndex>
+<keyObject>E6EC3307-66E0-3F86-0EAF-47A4C61CEF55</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="75850FC0-3982-F3B0-FF0F-772AE66B2750" name="DOZORCA_HODNOST_FK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>5FCC2439-A968-AC6A-EB24-B397618BAA4F</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<containerWithKeyObject>333B3228-A323-CDD0-D0A7-8D01512A050C</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>D7705545-66F9-D0FB-9652-4494F35BFDF0</localFKIndex>
+<keyObject>C22CDA59-DA77-28AE-15A3-1FC90D4D8A17</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

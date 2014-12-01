@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1FE6413C-0CB4-5C4C-0908-AFBFE4858206" name="CELA">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>F76A9967-19C3-B603-333E-E0FAF9B58C8C</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="97AC4A54-AFEA-3B45-021F-8C0A030E8604">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>97401494-7927-F72E-EF00-0D59BEBC759B</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BLOK" id="5E3E4E54-E1CF-C2C8-F9FE-C7396258B60F">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>5DED7157-2AE0-AA12-7F4F-C458AE91F65E</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="KAPACITA" id="511C2019-F99D-BF66-2F02-A14E34AD250C">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>5477A946-25DA-5271-AF91-FD7285D7EB1E</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OBSADENOST" id="05DCE84A-BE8B-9BD5-D945-3BA8D72E083B">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>CB1BFE5E-2467-6BDA-1988-B75F3240B4A5</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Attribute_1" id="D2F8E272-913F-919B-635A-9746A34293BE">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>2847AC4E-22B1-CC87-094C-E7F4DFAD8A36</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<use>0</use>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BLOK_ID" id="2A717DA6-9790-DD17-A05A-4F7B6F867E09">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>B34FFBFA-B526-7E0A-5359-CEB72CDBE450</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<use>0</use>
+<delegate>3A1CEEC4-90D3-484A-2D70-BD08182005F1</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="47EC7F67-67EF-FFEB-F2BC-40846E96D892" referredColumn="3A1CEEC4-90D3-484A-2D70-BD08182005F1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1450CBE5-286B-7DDD-4EDB-52B5B9D1AFAD" name="CELA_PK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>FC4EC989-EA89-EE3E-AD90-62C9C99A94B3</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97AC4A54-AFEA-3B45-021F-8C0A030E8604"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F061413-04F4-0260-8544-54340DAE1B89" name="CELA_BLOK_FK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>556A3040-CA0A-4FBC-D3F7-8EF6AE01DBC4</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2A717DA6-9790-DD17-A05A-4F7B6F867E09"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

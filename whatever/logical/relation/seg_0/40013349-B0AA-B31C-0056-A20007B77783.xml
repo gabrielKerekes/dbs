@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="VAZEN_POSTA" directorySegmentName="seg_0" id="40013349-B0AA-B31C-0056-A20007B77783">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 13:52:14 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<engineerTo>
+<item key="C457BCD6-C8F0-297F-0663-F2D9EB2D3C4E" value="true"/>
+<item key="4C6F4AAA-EDAD-3955-E258-F382CC3BE772" value="true"/>
+</engineerTo>
+<sourcePk>645B9394-A270-EFB6-F824-072E3B451B3F</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5B53E46C-9800-FA52-ECEF-3DE63523E35E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>45274A46-3895-5E1B-3C19-FFA314434D17</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

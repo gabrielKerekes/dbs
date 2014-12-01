@@ -1,0 +1,28 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="44CBCCEF-61AD-3525-C3BA-73DFB558C88B" name="BLOK" seqName="seg_0"/>
+   <object objectType="Table" objectID="1FE6413C-0CB4-5C4C-0908-AFBFE4858206" name="CELA" seqName="seg_0"/>
+   <object objectType="Table" objectID="333B3228-A323-CDD0-D0A7-8D01512A050C" name="DOZORCA" seqName="seg_0"/>
+   <object objectType="Table" objectID="C6B44968-E6EE-D908-A620-16DD8EABF823" name="HODNOST" seqName="seg_0"/>
+   <object objectType="Table" objectID="BE1DB619-16F0-A72D-2542-4450D8FEA121" name="PLATOVA_SKUPINA" seqName="seg_0"/>
+   <object objectType="Table" objectID="818A63E9-2901-D0FB-672C-3A58FC6271B4" name="POSTA" seqName="seg_0"/>
+   <object objectType="Table" objectID="1D597379-D1B7-EF79-CC6D-961C2A00DE26" name="PRACA" seqName="seg_0"/>
+   <object objectType="Table" objectID="B98CB3C1-861A-E254-BD88-46FE58735DF0" name="PRIESTUPOK" seqName="seg_0"/>
+   <object objectType="Table" objectID="5AD96E93-E909-CD44-8E7B-FA6B9EE22B53" name="SLUZBA" seqName="seg_0"/>
+   <object objectType="Table" objectID="37AC6D34-35D9-1A6B-A6F3-7C4019A8719C" name="TYP_SLUZBY" seqName="seg_0"/>
+   <object objectType="Table" objectID="CC4AB1A0-5F9C-963C-627D-812BB6E98EEA" name="VAZEN_PRIESTUPOK" seqName="seg_0"/>
+   <object objectType="Table" objectID="3730EBD7-6955-57FB-1BCF-DBFDE8FEB778" name="Väzeň" seqName="seg_0"/>
+   <object objectType="Table" objectID="462FFC03-F475-C446-C147-B386FE78B226" name="ZAVAZNOST_TRESTU" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="47EC7F67-67EF-FFEB-F2BC-40846E96D892" name="CELA_BLOK_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="17276DA6-5D5F-9BD0-5564-403FA679C256" name="DOZORCA_BLOK_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="75850FC0-3982-F3B0-FF0F-772AE66B2750" name="DOZORCA_HODNOST_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="D6A98ED4-3C5E-7C31-3A0F-3373E53C6C76" name="FK_ASS_10" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="514BFC0C-E575-F917-C282-C00833B187A9" name="FK_ASS_11" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="02B89687-A29D-9ADD-E621-2C1AB2A3AB71" name="HODNOST_PLATOVA_SKUPINA_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="5B3D0777-E50D-A08B-7E95-767B9A4B0244" name="SLUZBA_DOZORCA_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="C3E828B7-3837-C4B2-BFCF-49B96D6B9F1F" name="SLUZBA_TYP_SLUZBY_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="3C1E16DD-08B4-DF16-F5CB-B52386E14F16" name="Väzeň_CELA_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="1ECE2023-FC1A-29C4-6EFD-82A6F638A23A" name="Väzeň_POSTA_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="611F6121-6A47-243C-D7C2-0FC848C951F8" name="Väzeň_PRACA_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="284E2FD8-E3F0-4C63-52B4-DD1ADCCAAFC9" name="Väzeň_ZAVAZNOST_TRESTU_FK" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

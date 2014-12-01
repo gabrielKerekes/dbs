@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C6B44968-E6EE-D908-A620-16DD8EABF823" name="HODNOST">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>CA0B9380-B1F6-4616-562D-A6CBE85236DA</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="21865DD9-EF2C-9309-5FD4-725E7A7F98C3">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>37465331-B98F-C292-678D-BDF6D6B8156D</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PLATOVA_TRIEDA" id="9FBDDD6C-5D99-025A-2C01-F66F4A45359F">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>2807E3EF-0719-6C25-4ECD-BBE628DFB17E</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAZOV_HODNOSTI" id="41E6C4A4-70BB-D990-6646-F19A6D4211B7">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>C5FBDFAF-BB3E-A91C-4CFA-B1472375406F</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PLATOVA_SKUPINA_TRIEDA" id="DDB601E3-E885-51AD-B509-5546AA69C8A5">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>4B670ECC-54EA-CA6A-CDC5-69288FBB5F78</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<delegate>32066156-7146-B0FE-2869-F3BF6CA91726</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="02B89687-A29D-9ADD-E621-2C1AB2A3AB71" referredColumn="32066156-7146-B0FE-2869-F3BF6CA91726"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C22CDA59-DA77-28AE-15A3-1FC90D4D8A17" name="HODNOST_PK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>2A324BF9-7CF5-7037-EEF6-65F81D5D9ABD</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="21865DD9-EF2C-9309-5FD4-725E7A7F98C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7E1C3106-AEB5-9991-FB45-AAB46C5FD562" name="HODNOST_PLATOVA_SKUPINA_FK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>093CE6DE-1A3E-DE0A-F946-E218664D187E</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDB601E3-E885-51AD-B509-5546AA69C8A5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

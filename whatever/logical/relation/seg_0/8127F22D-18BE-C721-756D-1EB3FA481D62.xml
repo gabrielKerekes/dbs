@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TYP_SLUZBY_SLUZBA" directorySegmentName="seg_0" id="8127F22D-18BE-C721-756D-1EB3FA481D62">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:01:59 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<engineerTo>
+<item key="C457BCD6-C8F0-297F-0663-F2D9EB2D3C4E" value="true"/>
+<item key="4C6F4AAA-EDAD-3955-E258-F382CC3BE772" value="true"/>
+</engineerTo>
+<sourcePk>8F40F06F-30F2-5D5C-FE45-724872FB0D81</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>EF2CB4E7-6116-BFD7-AD4E-474B5EA9DD95</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>34408977-35D0-ED2A-5122-801F5379293B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

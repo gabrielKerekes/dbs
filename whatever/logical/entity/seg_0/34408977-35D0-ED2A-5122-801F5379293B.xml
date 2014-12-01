@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="34408977-35D0-ED2A-5122-801F5379293B" name="SLUZBA">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 13:41:45 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<engineerTo>
+<item key="C457BCD6-C8F0-297F-0663-F2D9EB2D3C4E" value="true"/>
+<item key="4C6F4AAA-EDAD-3955-E258-F382CC3BE772" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="D87A3688-E860-E472-8493-B11D113739C5">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 13:41:54 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<engineerTo>
+<item key="C457BCD6-C8F0-297F-0663-F2D9EB2D3C4E" value="true"/>
+<item key="4C6F4AAA-EDAD-3955-E258-F382CC3BE772" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="ID_DOZORCU" id="89FFAB93-1592-5A19-4EF3-6459A155D8C1">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 13:41:58 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<engineerTo>
+<item key="C457BCD6-C8F0-297F-0663-F2D9EB2D3C4E" value="true"/>
+<item key="4C6F4AAA-EDAD-3955-E258-F382CC3BE772" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="DATUM" id="39630DD1-796F-1C65-1CDC-A41DB973B22D">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 13:42:04 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<engineerTo>
+<item key="C457BCD6-C8F0-297F-0663-F2D9EB2D3C4E" value="true"/>
+<item key="4C6F4AAA-EDAD-3955-E258-F382CC3BE772" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="TYP_SLUZBY" id="C9DE92D5-4682-E466-500E-983628541ECD">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 13:42:07 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<engineerTo>
+<item key="C457BCD6-C8F0-297F-0663-F2D9EB2D3C4E" value="true"/>
+<item key="4C6F4AAA-EDAD-3955-E258-F382CC3BE772" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="ID1" id="D1A6C2B8-4CFB-A911-D1C2-1F66F5CB3269">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 13:55:59 UTC</createdTime>
+<generatorID>0D0BA1E3-373F-1A22-FFE0-919865077E2D</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<engineerTo>
+<item key="C457BCD6-C8F0-297F-0663-F2D9EB2D3C4E" value="true"/>
+<item key="4C6F4AAA-EDAD-3955-E258-F382CC3BE772" value="true"/>
+</engineerTo>
+<referedAttribute>5AC8BD20-F82C-4508-E018-B64D917EE871</referedAttribute>
+<use>0</use>
+</Attribute>
+<Attribute name="ID2" id="F175E92D-2B2C-05AB-5652-5A0C5EFE98E0">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:01:59 UTC</createdTime>
+<generatorID>8127F22D-18BE-C721-756D-1EB3FA481D62</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<engineerTo>
+<item key="C457BCD6-C8F0-297F-0663-F2D9EB2D3C4E" value="true"/>
+<item key="4C6F4AAA-EDAD-3955-E258-F382CC3BE772" value="true"/>
+</engineerTo>
+<referedAttribute>5A376694-4767-76B2-43BD-39181C9304E8</referedAttribute>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EEC5DAEF-353E-F503-F1B6-C523C49CD043" name="{entity} PK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 13:41:56 UTC</createdTime>
+<ownerDesignName>whatever</ownerDesignName>
+<engineerTo>
+<item key="C457BCD6-C8F0-297F-0663-F2D9EB2D3C4E" value="true"/>
+<item key="4C6F4AAA-EDAD-3955-E258-F382CC3BE772" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D87A3688-E860-E472-8493-B11D113739C5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

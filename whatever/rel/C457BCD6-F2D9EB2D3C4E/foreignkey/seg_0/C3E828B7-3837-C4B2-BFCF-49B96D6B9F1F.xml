@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C3E828B7-3837-C4B2-BFCF-49B96D6B9F1F" name="SLUZBA_TYP_SLUZBY_FK">
+<createdBy>nestel</createdBy>
+<createdTime>2014-11-30 14:04:37 UTC</createdTime>
+<generatorID>8127F22D-18BE-C721-756D-1EB3FA481D62</generatorID>
+<ownerDesignName>whatever</ownerDesignName>
+<containerWithKeyObject>5AD96E93-E909-CD44-8E7B-FA6B9EE22B53</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>22DF7EEA-9304-7EDE-B8C9-37337034B012</localFKIndex>
+<keyObject>1926622C-FF93-92D6-CF5D-585404468F2A</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
