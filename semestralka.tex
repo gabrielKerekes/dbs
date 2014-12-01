@@ -40,10 +40,24 @@
 		Kód úlohy: \textbf{D07} \\
 		Názov úlohy: \textbf{Riaditeľ väznice} \\
 
-		Bol Ste vymenovaný za riaditeľa menšej väznice, ktorá má A väzňov ubytovaných v B celách a máte k dispozícii C dozorcov (doplňte za A, B,C vhodné čísla). Vytvorte databázový systém, tak by Vaša väznica mohla efektívne fungovať. Potrebujete evidovať v databázovom systéme väzňov s ich trestami a dátumom prepustenia, ich umiestnenie na celách, služby dozorcov, atď. Musíte mať prehľad o tom kedy bude ktorý väzeň prepustený, sledovať jeho správanie a podľa tohto správania mu znížit, alebo zvýšiť trest. Podľa Vášho uváženia sledujte aj ďalšie údaje napr. návštevy u väzňov, prijaté listy a balíčky, počet odpracovaných hodín dozorcov (prípadne aj väzňov), celkové prehľady, atď.
+		Bol Ste vymenovaný za riaditeľa menšej väznice, ktorá má A väzňov ubytovaných v B celách a máte k dispozícii C dozorcov (doplňte za A, B
+		,C vhodné čísla). Vytvorte databázový systém, tak by Vaša väznica mohla efektívne fungovať. Potrebujete evidovať v databázovom systéme 
+		väzňov s ich trestami a dátumom prepustenia, ich umiestnenie na celách, služby dozorcov, atď. Musíte mať prehľad o tom kedy bude ktorý 
+		väzeň prepustený, sledovať jeho správanie a podľa tohto správania mu znížit, alebo zvýšiť trest. Podľa Vášho uváženia sledujte aj 
+		ďalšie údaje napr. návštevy u väzňov, prijaté listy a balíčky, počet odpracovaných hodín dozorcov (prípadne aj väzňov), celkové 
+		prehľady, atď.
 	\section{Kocneptuálna úroveň}
 		\subsection{Entity}
-			Entity sme vyberali na základe toho aké údaje budeme potrebovať ukladať. Začali sme s entitami VÄZEŇ, DOZORCA, CELA.\\ Entita VÄZEŇ slúži na uchovávanie informácií o väzňoch, DOZORCA na uchovávanie údajov o dozorcoch a CELA informácie o celách. Pri navrhovaní entity VÄZEŇ sme boli donutení vytvoriť ďaľšie entity súvisiace s väzňami. Sú to PRÁCA, ZÁVAŽNOSŤ TRESTU, PRIESTUPOK, POŠTA. PRÁCA je entita, ktorá má v sebe uložené všetky práce, ktoré väzni môžu vykonávať. ZÁVAŽNOSŤ TRESTU má v sebe uložené závažnosti trestov aj s ichpopisom. PRIESTUPOK ukladá informácie o priestupkoch vykonaných väzňami. POŠTA ukladá informácie o pošte, ktorý väzni prijali alebo odoslali. Rovnako k entite DOZORCA sme museli vytvoriť entity HODNOSŤ, BLOK, SLUŽBA. HODNOSŤ je tabuľka uchovávajúca všetky hodnosti, ktoré môže dozorca dosiahnuť. Dozorca pracuje v určitom čase iba v jednom bloku. Všetky bloky väznice musia byť niekde uložené. Preto sme vytvorili entitu BLOK, aby sme vedeli určit v akom bloku dozorca pracujem, alebo v akom bloku sa nachádza cela. Entita SLUŽBA ukladá všetky služby, ktoré dozorca mal, alebo ešte len bude mať. Na určenie o akú službu sa jedná sme vytvorili entitut TYP$\_$SLUŽBY aby sa typ služby určoval jednoduchšie.
+			Entity sme vyberali na základe toho aké údaje budeme potrebovať ukladať. Začali sme s entitami VÄZEŇ, DOZORCA, CELA.\\ Entita VÄZEŇ 
+			slúži na uchovávanie informácií o väzňoch, DOZORCA na uchovávanie údajov o dozorcoch a CELA informácie o celách. Pri navrhovaní 
+			entity VÄZEŇ sme boli donutení vytvoriť ďaľšie entity súvisiace s väzňami. Sú to PRÁCA, ZÁVAŽNOSŤ TRESTU, PRIESTUPOK, POŠTA. PRÁCA 
+			je entita, ktorá má v sebe uložené všetky práce, ktoré väzni môžu vykonávať. ZÁVAŽNOSŤ TRESTU má v sebe uložené závažnosti trestov 
+			aj s ichpopisom. PRIESTUPOK ukladá informácie o priestupkoch vykonaných väzňami. POŠTA ukladá informácie o pošte, ktorý väzni 
+			prijali alebo odoslali. Rovnako k entite DOZORCA sme museli vytvoriť entity HODNOSŤ, BLOK, SLUŽBA. HODNOSŤ je tabuľka uchovávajúca 
+			všetky hodnosti, ktoré môže dozorca dosiahnuť. Dozorca pracuje v určitom čase iba v jednom bloku. Všetky bloky väznice musia byť 
+			niekde uložené. Preto sme vytvorili entitu BLOK, aby sme vedeli určit v akom bloku dozorca pracujem, alebo v akom bloku sa nachádza 
+			cela. Entita SLUŽBA ukladá všetky služby, ktoré dozorca mal, alebo ešte len bude mať. Na určenie o akú službu sa jedná sme 
+			vytvorili entitut TYP$\_$SLUŽBY aby sa typ služby určoval jednoduchšie.
 		\subsection{Atribúty}
 			Atribúty sú vlastnosti entít. Zvolili sme ich následovne: \\
 			VÄZEŇ - id, meno, priezvisko, cela, datum prijatia, datum prepustenia, spravanie, zavaznost trestu, praca\\
@@ -73,7 +87,8 @@
 				Kardinalita: N:1 Jeden typ závažnosti trestu môže mať viac väzňov, avšak väzeň môže mať iba jeden typ závažnosti trestu. \\
 				Parcialita: Väzeň musí mať nejaký typ závažnosti trestu, avšak závažnosť trestu nemusí prislúchať nejakému väzňovi.\\ \\
 			\textbf{Väzeň - Priestupok} \\
-				Kardinalita: N:N Jeden priestupok mohol byť spáchaný viacerými väzňami, a taktiež jeden väzeň mohol spáchať viacej priestupkov.\\
+				Kardinalita: N:N Jeden priestupok mohol byť spáchaný viacerými väzňami, a taktiež jeden väzeň mohol spáchať viacej priestupkov.
+				\\
 				Parcialita: Väzeň nemusí spáchať priestupok, avšak priestupok musí mať svojho vinníka.\\ \\
 			\textbf{Väzeň - Pošta} \\
 				Kardinalita: 1:N Poštu môže odoslať/prijímať len jeden väzeň, avšak viac väzňov môže odoslať/prijímať poštu.\\
@@ -91,7 +106,8 @@
 				Kardinalita: 1:N Jedna služba môže prislúchať len jednému dozorcovi, avšak jeden dozorca môže mať viacero služieb.\\
 				Parcialita: Dozorca musí byť prihlásený na službu a služba musí mať svojho vykonávateľa.\\ \\
 			\textbf{Hodnosť - Platová skupina} \\
-				Kardinalita: N:1 Jedna platová skupina môže obsahovať viacero hodností, avšak jedna hodnosť môže byť len v jednej platovej skupine.\\
+				Kardinalita: N:1 Jedna platová skupina môže obsahovať viacero hodností, avšak jedna hodnosť môže byť len v jednej platovej 
+				skupine.\\
 				Parcialita: Hodnosť musí byť zapísaná v nejakej platovej skupine, a taktiež platová skupina musí obsahovať nejakú hodnosť.\\ \\
 			\textbf{Blok - Cela} \\
 				Kardinalita: 1:N Jedna cela môže byť len v jednom bloku, avšak jeden blok môže obsahovať viacero ciel.\\
@@ -101,33 +117,54 @@
 				Parcialita: Služba musí byť nejakým typom služby, avšak typ služby nemusí mať žiadnu službu.\\ \\
 		\subsection{ERA diagram}
 		\subsection{Prehľad požiadaviek používateľa databázového systému}
-			Budeme potrebovať evidovať všetkých väzňov. Ich dátumy uväznenia, dátumy prepustenia, poštu, ktorú prijímajú/odosielajú, závažnosť ich trestov, ich prácu vo väznici a priestupky, ktoré vykonali. Podľa ich priestupkov budeme vedieť určovať ich správanie a podľa toho im zvyšovať/znižovať ich trest. \\
-			Taktiež budeme potrebovať evidovať informácie o všetkých dozorcoch. Akú majú hodnosť, plat a aký blok strážia. Každá hodnosť má pridelenú platovú skupinu do ktorej zapadá. O platovej skupine potrebujeme uchovávať len jej názov, maximálny a minimálny plat. Dozorcovia tiež majú služby, ktoré tiež treba uchovávať. Služby sú rôzne, preto budeme potrebovať ukladať aj typy služieb. Typ služby má byť určený nejakým názvom, časom začiatku služby a časom škončenia služby. Máme tri základné typy služieb a to rannú, poobednú a nočnú, ale napríklad keď dozorca môže pracovať od 10:00 do 12:00, malo by toto byť vytvorené ako nový typ služby.	\\
-			Naša väznica je rozdelená na bloky. V každom bloku je niekoľko ciel a v každej cele môže viacero väzňov. Čiže systém by mal mať uložené všetky naše cely, ich kapacitu a v akom bloku sa nachádzajú. Pri blokoch potrebujeme mať tiež uloženú ich kapacitu, ale ešte aj ich úroveň stráženia znázornenú číslom. 
+			Budeme potrebovať evidovať všetkých väzňov. Ich dátumy uväznenia, dátumy prepustenia, poštu, ktorú prijímajú/odosielajú, závažnosť 
+			ich trestov, ich prácu vo väznici a priestupky, ktoré vykonali. Podľa ich priestupkov budeme vedieť určovať ich správanie a podľa 
+			toho im zvyšovať/znižovať ich trest. \\
+			Taktiež budeme potrebovať evidovať informácie o všetkých dozorcoch. Akú majú hodnosť, plat a aký blok strážia. Každá hodnosť má 
+			pridelenú platovú skupinu do ktorej zapadá. O platovej skupine potrebujeme uchovávať len jej názov, maximálny a minimálny plat. 
+			Dozorcovia tiež majú služby, ktoré tiež treba uchovávať. Služby sú rôzne, preto budeme potrebovať ukladať aj typy služieb. Typ 
+			služby má byť určený nejakým názvom, časom začiatku služby a časom škončenia služby. Máme tri základné typy služieb a to rannú, 
+			poobednú a nočnú, ale napríklad keď dozorca môže pracovať od 10:00 do 12:00, malo by toto byť vytvorené ako nový typ služby.	\\
+			Naša väznica je rozdelená na bloky. V každom bloku je niekoľko ciel a v každej cele môže bývať viacero väzňov. Čiže systém by mal 
+			mať uložené všetky naše cely, ich kapacitu a v akom bloku sa nachádzajú. Pri blokoch potrebujeme mať tiež uloženú ich kapacitu, ale 
+			ešte aj ich úroveň stráženia znázornenú číslom. 
 	\section{Logická úroveň}
 		\subsection{Normalizácia}
-			O relácii (tabuľke) hovoríme, že je v prvej normálnej forme, ak sú všetky jej atribúty atomické , t.j. ďalej nedeliteľne . Inými slovami - každý atribút relácie môže mať iba jednu hodnotu, teda nemôže byť jeho hodnotou ďalšia relácia. Mali by sme preto rozdeliť atribút  pre uľahčenie vyhľadávania – ak si napr. pamätáme len priezvisko zákazníka.
+			Všetky naše tabuľky sú navrhnuté podľa 1., 2. aj 3. normálovej formy. Aby bola splnená prvá normálová forma, musia byť všetky 
+			atribúty entít atomické, čo znamená že napr. meno a priezvisko nebudú uchované v jednom stĺpci ale budú rozdelené do dvoch stĺpcov. 
+			Pre druhú normálovú formu musí byť splnené, že každý atribút, ktorý nieje primárnym kľúčom je na ňom úplne závislý. ??? V tretej 
+			normálovej forme je tabuľka vtedy, keď všetky jej atribúty, ktoré nie sú primárnym kľúčom
 		\subsection{Voľba a stanovenie identifikátorov, primárnych kľúčov, pre definované entity}
 			Ako identifikátory môžeme zvoliť atribút, kombináciu atribútov alebo zaviesť nový atribút,
-			ktorý slúži iba ako jedinečný identifikátor každého riadku. Zvolili sme práve tretiu možnosť a ku všetkým naším entitám pridáme primárny kľúč ID.		
+			ktorý slúži iba ako jedinečný identifikátor každého riadku. Zvolili sme práve tretiu možnosť a ku všetkým naším entitám pridáme 
+			primárny kľúč ID.		
 		\subsection{Relačná schéma}	
 	\section{Implementačná úroveň}
 		\subsection{Slovný popis návrhu}
 			\subsubsection{Dátove typy}
-				Mená sme zvolili ako dátový typ VARCHAR2 s rozsahom 12 a priezviská s rozsahom 18. Predpokladáme, že takýto rozsah nám bude stačiť.
+				Mená sme zvolili ako dátový typ VARCHAR2 s rozsahom 12 a priezviská s rozsahom 18. Predpokladáme, že takýto rozsah nám bude 
+				stačiť.
 				Pre názov práce, názov priestupku, názov hodnosti, názov služby a názov trestu sme použili dátový typ VARCHAR2 s rozsahom 12. 
-				Pre úroveň stráženia a závažnosť trestu použijeme dátový typ NUMBER s rozsahom 1. Keďže úrovne stráženia a závažnosti sa značia od 1-9, tak nám takýto rozsah bude stačiť. 
-				Pre plat, počet ciel, kapacitu väzňov v bloku, obsadenosť v bloku a pre pracovné odmeny sme zvolili dátový typ NUMBER s rozsahom 5. Takýto rozsah nám bude stačiť.
+				Pre úroveň stráženia a závažnosť trestu použijeme dátový typ NUMBER s rozsahom 1. Keďže úrovne stráženia a závažnosti sa značia 
+				od 1-9, tak nám takýto rozsah bude stačiť. 
+				Pre plat, počet ciel, kapacitu väzňov v bloku, obsadenosť v bloku a pre pracovné odmeny sme zvolili dátový typ NUMBER s 
+				rozsahom 5. Takýto rozsah nám bude stačiť.
 				Pre každé ID sme zvolili dátový typ NUMBER s rozsahom 5 pre jasnejšiu identifikáciu a dostatočný priestor. 
 				Dátumy sa ukladajú ako reťazce pohyblivej dĺžky s maximálnym rozsahom 10 - VARCHAR2(10).
 				Čas od a čas po v typoch služieb ukladáme ako NUMBER(2,1), pretože sa tieto časy budú značiť ako napr. 6. alebo 6.5, či 12.5.
-				Pre kapacitu väzňov a obsadenosti väzňov v celách nám stačí dátový typ NUMBER s rozsahom 1, pretože žiadna cela nebude môcť obsahovať viac ako 2 väzňov, a teda ani obsadenosť nebude vyššia. 
-				Pre minimum platovej skupiny a maximum platovej skupiny budeme potrebovať dátový typ NUMBER(5,2), teda NUMBER s rozsahom 5 číslic a s presnoťou 2 desatinným miestach. Keďže plat môže byť aj napr. 540,55.
+				Pre kapacitu väzňov a obsadenosti väzňov v celách nám stačí dátový typ NUMBER s rozsahom 1, pretože žiadna cela nebude môcť 
+				obsahovať viac ako 2 väzňov, a teda ani obsadenosť nebude vyššia. 
+				Pre minimum platovej skupiny a maximum platovej skupiny budeme potrebovať dátový typ NUMBER(5,2), teda NUMBER s rozsahom 5 
+				číslic a s presnoťou 2 desatinným miestach. Keďže plat môže byť aj napr. 540,55.
 			\subsubsection{Určenie DEFAULT hodnôt pre stĺpce}
-				Zadanie defaultnej hodnoty má zmysel pri vytváraní nového väzňa, kde za dátum uväznenia zadáme aktuálny dátum, získaný orezaním a zmenou typu systémového času. 
-				Takisto aj dátum priestupku sa bude riešiť rovnakým spôsobom, pretože je jasné, že keď vznikol nejaký priestupok tak dátum zadávame v ten istý deň. 
-				Pre atribút práca, v entite väzeň, môžeme zadať defaultnú hodnotu "nevykonáva", pretože tento atribúť zmeníme, až keď mu dozorcovia pridelia prácu. 
-				Pre obsadenosť bloku a obsadenosť ciel môžeme zadať defaultnú hodnotu "0", pretože hneď po vytvorení v bloku nie je žiaden väzeň a takisto pri vytvorení cely nie je v cele žiaden väzeň. 
+				Zadanie defaultnej hodnoty má zmysel pri vytváraní nového väzňa, kde za dátum uväznenia zadáme aktuálny dátum, získaný orezaním 
+				a zmenou typu systémového času. 
+				Takisto aj dátum priestupku sa bude riešiť rovnakým spôsobom, pretože je jasné, že keď vznikol nejaký priestupok tak dátum 
+				zadávame v ten istý deň. 
+				Pre atribút práca, v entite väzeň, môžeme zadať defaultnú hodnotu "nevykonáva", pretože tento atribúť zmeníme, až keď mu 
+				dozorcovia pridelia prácu. 
+				Pre obsadenosť bloku a obsadenosť ciel môžeme zadať defaultnú hodnotu "0", pretože hneď po vytvorení v bloku nie je žiaden 
+				väzeň a takisto pri vytvorení cely nie je v cele žiaden väzeň. 
 			\subsubsection{Obmedzenia}
 				ja
 		\subsection{Fyzický model}
