@@ -47,11 +47,10 @@
 		prehľady, atď.
 	\section{Kocneptuálna úroveň}
 		\subsection{Entity}
-			Entity sme vyberali na základe toho aké údaje budeme potrebovať ukladať. Začali sme s entitami \textbf{VÄZEŇ}, \textbf{DOZORCA}, \textbf{CELA}.\\ Entita \textbf{VÄZEŇ} slúži na uchovávanie informácií o väzňoch, \textbf{DOZORCA} na uchovávanie údajov o dozorcoch a \textbf{CELA} informácie o celách. Pri navrhovaní entity \textbf{VÄZEŇ} sme boli donutení vytvoriť ďaľšie entity súvisiace s väzňami. Sú to \textbf{PRÁCA}, \textbf{ZÁVAŽNOSŤ TRESTU}, \textbf{PRIESTUPOK}, \textbf{POŠTA}. \textbf{PRÁCA} je entita, ktorá má v sebe uložené všetky práce, ktoré väzni môžu vykonávať. \textbf{ZÁVAŽNOSŤ TRESTU} má v sebe uložené závažnosti trestov aj s ichpopisom. \textbf{PRIESTUPOK} ukladá informácie o priestupkoch vykonaných väzňami. \textbf{POŠTA} ukladá informácie o pošte, ktorý väzni prijali alebo odoslali. Rovnako k entite \textbf{DOZORCA} sme museli vytvoriť entity \textbf{HODNOSŤ}, \textbf{BLOK}, \textbf{SLUŽBA}. \textbf{HODNOSŤ} je tabuľka uchovávajúca všetky hodnosti, ktoré môže dozorca dosiahnuť. Dozorca pracuje v určitom čase iba v jednom bloku. Všetky bloky väznice musia byť niekde uložené. Preto sme vytvorili entitu \textbf{BLOK}, aby sme vedeli určit v akom bloku dozorca pracujem, alebo v akom bloku sa nachádza cela. Entita \textbf{SLUŽBA} ukladá všetky služby, ktoré dozorca mal, alebo ešte len bude mať. Na určenie o akú službu sa jedná sme vytvorili entitut \textbf{TYP$\_$SLUŽBY} aby sa typ služby určoval jednoduchšie.
+			Entity sme vyberali na základe toho aké údaje budeme potrebovať ukladať. Začali sme s entitami \textbf{VÄZEŇ}, \textbf{DOZORCA}, \textbf{CELA}.\\ Entita \textbf{VÄZEŇ} slúži na uchovávanie informácií o väzňoch, \textbf{DOZORCA} na uchovávanie údajov o dozorcoch a \textbf{CELA} informácie o celách. Pri navrhovaní entity \textbf{VÄZEŇ} sme boli donutení vytvoriť ďaľšie entity súvisiace s väzňami. Sú to \textbf{PRÁCA}, \textbf{ZÁVAŽNOSŤ TRESTU}, \textbf{PRIESTUPOK}, \textbf{POŠTA}. \textbf{PRÁCA} je entita, ktorá má v sebe uložené všetky práce, ktoré väzni môžu vykonávať. \textbf{PRIESTUPOK} ukladá informácie o priestupkoch vykonaných väzňami. \textbf{POŠTA} ukladá informácie o pošte, ktorý väzni prijali alebo odoslali. Rovnako k entite \textbf{DOZORCA} sme museli vytvoriť entity \textbf{HODNOSŤ}, \textbf{BLOK}, \textbf{SLUŽBA}. \textbf{HODNOSŤ} je tabuľka uchovávajúca všetky hodnosti, ktoré môže dozorca dosiahnuť. Dozorca pracuje v určitom čase iba v jednom bloku. Všetky bloky väznice musia byť niekde uložené. Preto sme vytvorili entitu \textbf{BLOK}, aby sme vedeli určit v akom bloku dozorca pracujem, alebo v akom bloku sa nachádza cela. Entita \textbf{SLUŽBA} ukladá všetky služby, ktoré dozorca mal, alebo ešte len bude mať. Na určenie o akú službu sa jedná sme vytvorili entitut \textbf{TYP$\_$SLUŽBY} aby sa typ služby určoval jednoduchšie.
 		\subsection{Atribúty}
 			Atribúty sú vlastnosti entít. Zvolili sme ich následovne po diskusii so zákazníkom: \\
 			\textbf{VÄZEŇ} - id, meno, priezvisko, cela, datum prijatia, datum prepustenia, priestupok, \\ závažnosť trestu, práca\\
-			\textbf{ZÁVAŽNOSŤ TRESTU} - id, nazov\\
 			\textbf{PRIESTUPOK} - id, id väzňa, dátum, popis\\
 			\textbf{PRÁCA} - id, názov, odmena\\
 			\textbf{POŠTA} - id, id väzňa, cinnost\\
@@ -69,15 +68,12 @@
 				\caption{Matrix diagram}
 				\label{fig:Reinforcement}
 			\end{figure}
+			\clearpage
 		\subsection{Vzťahy medzi entitami}
 			\textbf{Väzeň - Práca} \\
 				Kardinalita: N:1 Jednu prácu môže vykonávať viac väzňov, avšak väzeň môže vykonávať iba jednu prácu v daný čas.\\
 				Parcialita: Väzeň nemusí vykonávať žiadnu prácu, avšak práca musí byť vykonávaná nejakým väzňom.\\ 
 				Transferabilita: Väzňovi môže byť práca hocikedy zmenená a takisto aj práca môže byť vykonávaná inými väzňami.\\ \\
-			\textbf{Väzeň - Závažnosť trestu} \\
-				Kardinalita: N:1 Jeden typ závažnosti trestu môže mať viac väzňov, avšak väzeň môže mať iba jeden typ závažnosti trestu. \\
-				Parcialita: Väzeň musí mať nejaký typ závažnosti trestu, avšak závažnosť trestu nemusí prislúchať nejakému väzňovi.\\ 
-				Transferabilita: Závažnosť trestu väzňa sa nemôže meniť.\\ \\
 			\textbf{Väzeň - Priestupok} \\
 				Kardinalita: 1:N Jeden priestupok bude zaznamenaný pre jedného väzňa, a jeden väzeň mohol spáchať viacej priestupkov.
 				\\
@@ -170,7 +166,8 @@
 				Pre atribút práca, v entite väzeň, môžeme zadať defaultnú hodnotu NULL, pretože tento atribúť zmeníme, až keď mu dozorcovia pridelia prácu. 
 				Pre obsadenosť bloku a obsadenosť ciel môžeme zadať defaultnú hodnotu NULL, pretože hneď po vytvorení v bloku nie je žiaden väzeň a takisto pri vytvorení cely nie je v cele žiaden väzeň. 
 			\subsubsection{Obmedzenia}
-				ja
+				Nutnosť vyplnenia atribútom sme zabezpečili zakázaním NULL hodnoty tohto atribútu. 
+				........ KONTROLA KAPACIIIIIIIT
 		\subsection{Fyzický model}
 		\subsection{Prehľad potrebných SQL dopytov}
 			\subsubsection{Vkladanie údajov do tabuliek, zmena hodnôt stĺpcov}
