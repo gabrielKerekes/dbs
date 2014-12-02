@@ -99,7 +99,8 @@
 			\textbf{Dozorca - Blok} \\
 				Kardinalita: N:1 Blok môže byť strážený viacerými dozorcami, avšak dozorca môže strážiť len jeden blok naraz.\\
 				Parcialita: Dozorca musí strážiť nejaký blok, avšak blok nemusí byť strážený žiadnym dozorcom.\\ 
-				Transferabilita: Dozorca môže byť preradený na iný blok.\\ \\ \clearpage
+				Transferabilita: Dozorca môže byť preradený na iný blok.\\ \\ 
+			\clearpage
 			\textbf{Dozorca - Služba} \\
 				Kardinalita: 1:N Jedna služba môže prislúchať len jednému dozorcovi, avšak jeden dozorca môže mať viacero služieb.\\
 				Parcialita: Dozorca musí byť prihlásený na službu a služba musí mať svojho vykonávateľa.\\ 
@@ -187,6 +188,28 @@
 				\label{fig:Reinforcement}
 			\end{figure}
 		\clearpage
+		
+		Na ukladanie ID-čiek sme využili triggre a sekvencie. Pri každom pridaní riadku do tabuľky sa automaticky zvýši počítadlo sekvencie a		uloží sa ako ID v novovytvorenom riadku. \\ \\ 
+		\textbf{Príklad triggeru} \\
+		create or replace TRIGGER DOZORCOVIA$\_$ID$\_$TRIGG\\
+  		BEFORE INSERT ON DOZORCOVIA\\
+  		FOR EACH ROW\\
+		BEGIN\\
+  			:new.ID := DOZORCOVIA$\_$ID$\_$SQ.nextval;\\
+		END;\\ \\
+		\textbf{Príklad vytvorenia sekvencie} \\
+		CREATE SEQUENCE DOZORCOVIA$\_$ID$\_$SQ\\
+			START WITH 1 \\
+			INCREMENT BY 1;\\ \\
+		Takéto triggre a sekvencie sme vytvorili pre každú entitu.\\
+		Vytvorili sme aj triggre na zvyšovanie obsadenosti ciel a blokov pri pridávaní väzňov. \\
+		create or replace TRIGGER OBSADENOST$\_$TRIGG \\
+  		BEFORE INSERT ON VAZNI\\
+  		FOR EACH ROW\\
+		BEGIN\\
+  			UPDATE CELY SET OBSADENOST = OBSADENOST + 1 WHERE ID = :new.CELA;\\
+  			UPDATE BLOKY SET OBSADENOST = OBSADENOST + 1 WHERE ID = (SELECT BLOK FROM CELY WHERE ID = :new.CELA);	\\
+		END;\\ \\
 		\subsection{Prehľad potrebných SQL dopytov}
 			\subsubsection{Vkladanie údajov do tabuliek, zmena hodnôt stĺpcov}
 				INSERT INTO VAZNI VALUES(1,'Ferko','Mrkvcicka',1,default,'12/10/2022',default,3,1);\\
@@ -201,7 +224,8 @@
 				INSERT INTO TYPY$\_$SLUZIEB VALUES(1,'ranna',6,14.5);\\
 				INSERT INTO PRIESTUPKY VALUES(1,1,default,'bitka');\\
 			\subsubsection{Zmena údajov}
-				Výstavba ciel sa rekonštruje a v cele s ID = 27 pribudlo jedno miesto. V databáze musíme zvýšiť kapacitu tejto cely o 1 miesto. Nesmieme zabudnúť ale aj na zvýšenie kapacity celého bloku, v ktorom sa tá cela nachádza.\\
+				Výstavba ciel sa rekonštruje a v cele s ID = 27 pribudlo jedno miesto. V databáze musíme zvýšiť kapacitu tejto cely o 1 miesto.
+				Nesmieme zabudnúť ale aj na zvýšenie kapacity celého bloku, v ktorom sa tá cela nachádza.\\
 				\\
 				UPDATE CELY\\
 				SET KAPACITA = KAPACITA + 1\\
