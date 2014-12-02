@@ -33,7 +33,7 @@
 
 	\section{Úvod}
 		\subsection{Účel dokumentu}
-
+			
 		\subsection{Prehľad dokumentu}
 	\section{Úloha}
 		Kód úlohy: \textbf{D07} \\
@@ -58,8 +58,8 @@
 			cela. Entita SLUŽBA ukladá všetky služby, ktoré dozorca mal, alebo ešte len bude mať. Na určenie o akú službu sa jedná sme 
 			vytvorili entitut TYP$\_$SLUŽBY aby sa typ služby určoval jednoduchšie.
 		\subsection{Atribúty}
-			Atribúty sú vlastnosti entít. Zvolili sme ich následovne: \\
-			VÄZEŇ - id, meno, priezvisko, cela, datum prijatia, datum prepustenia, spravanie, zavaznost trestu, praca\\
+			Atribúty sú vlastnosti entít. Zvolili sme ich následovne po diskusii so zákazníkom: \\
+			VÄZEŇ - id, meno, priezvisko, cela, datum prijatia, datum prepustenia, priestupok, zavaznost trestu, praca\\
 			ZÁVAŽNOSŤ TRESTU - id, nazov\\
 			PRIESTUPOK - id, id väzňa, dátum, popis\\
 			PRÁCA - id, názov, odmena\\
@@ -86,7 +86,7 @@
 				Kardinalita: N:1 Jeden typ závažnosti trestu môže mať viac väzňov, avšak väzeň môže mať iba jeden typ závažnosti trestu. \\
 				Parcialita: Väzeň musí mať nejaký typ závažnosti trestu, avšak závažnosť trestu nemusí prislúchať nejakému väzňovi.\\ \\
 			\textbf{Väzeň - Priestupok} \\
-				Kardinalita: N:N Jeden priestupok mohol byť spáchaný viacerými väzňami, a taktiež jeden väzeň mohol spáchať viacej priestupkov.
+				Kardinalita: 1:N Jeden priestupok bude zaznamenaný pre jedného väzňa, a jeden väzeň mohol spáchať viacej priestupkov.
 				\\
 				Parcialita: Väzeň nemusí spáchať priestupok, avšak priestupok musí mať svojho vinníka.\\ \\
 			\textbf{Väzeň - Pošta} \\
@@ -115,6 +115,12 @@
 				Kardinalita: N:1 Jeden typ služby môže mať viacero služieb, avšak jedna služba môže byť len jedným typom služby.\\
 				Parcialita: Služba musí byť nejakým typom služby, avšak typ služby nemusí mať žiadnu službu.\\ \\
 		\subsection{ERA diagram}
+			\begin{figure}[!htb]
+				\centering
+				\includegraphics[scale=0.45]{ERAdia.png}
+				\caption{ERA diagram}
+				\label{fig:Reinforcement}
+			\end{figure}
 		\subsection{Prehľad požiadaviek používateľa databázového systému}
 			Budeme potrebovať evidovať všetkých väzňov. Ich dátumy uväznenia, dátumy prepustenia, poštu, ktorú prijímajú/odosielajú, závažnosť 
 			ich trestov, ich prácu vo väznici a priestupky, ktoré vykonali. Podľa ich priestupkov budeme vedieť určovať ich správanie a podľa 
@@ -141,7 +147,7 @@
 	\section{Implementačná úroveň}
 		\subsection{Slovný popis návrhu}
 			\subsubsection{Dátove typy}
-				Mená sme zvolili ako dátový typ VARCHAR2 s rozsahom 12 a priezviská s rozsahom 18. Predpokladáme, že takýto rozsah nám bude stačiť.
+				Mená sme zvolili ako dátový typ VARCHAR2 s rozsahom 12 a priezviská s rozsahom 18. Predpokladáme, že takýto rozsah nám bude stačiť, keďže pravdepodobne budeme pracovať so slovenskými menami.
 				Pre názov práce, názov priestupku, názov hodnosti, názov služby a názov trestu sme použili dátový typ VARCHAR2 s rozsahom 12. 
 				Pre úroveň stráženia a závažnosť trestu použijeme dátový typ NUMBER s rozsahom 1. Keďže úrovne stráženia a závažnosti sa značia od 1-9, tak nám takýto rozsah bude stačiť. 
 				Pre plat, počet ciel, kapacitu väzňov v bloku, obsadenosť v bloku a pre pracovné odmeny sme zvolili dátový typ NUMBER s rozsahom 5. Takýto rozsah nám bude stačiť. 
@@ -149,7 +155,7 @@
 				Dátumy sa ukladajú ako reťazce pohyblivej dĺžky s maximálnym rozsahom 10 - VARCHAR2(10).
 				Čas od a čas po v typoch služieb ukladáme ako NUMBER(2,1), pretože sa tieto časy budú značiť ako napr. 6. alebo 6.5, či 12.5.
 				Pre kapacitu väzňov a obsadenosti väzňov v celách nám stačí dátový typ NUMBER s rozsahom 1, pretože žiadna cela nebude môcť obsahovať viac ako 2 väzňov, a teda ani obsadenosť nebude vyššia. 
-				Pre minimum platovej skupiny a maximum platovej skupiny budeme potrebovať dátový typ NUMBER(5,2), teda NUMBER s rozsahom 5 číslic a s presnoťou 2 desatinným miestach. Keďže plat môže byť aj napr. 540,55.
+				Pre minimum platovej skupiny, maximum platovej skupiny a plat dozorcu budeme potrebovať dátový typ NUMBER(5,2), teda NUMBER s rozsahom 5 číslic a s presnoťou 2 desatinným miestach. Keďže plat môže byť aj napr. 540,55.
 			\subsubsection{Určenie DEFAULT hodnôt pre stĺpce}
 				Zadanie defaultnej hodnoty má zmysel pri vytváraní nového väzňa, kde za dátum uväznenia zadáme aktuálny dátum, získaný orezaním a zmenou typu systémového času. 
 				Takisto aj dátum priestupku sa bude riešiť rovnakým spôsobom, a teda defaultnov hodnotou bude deň pripísania priestupku.
