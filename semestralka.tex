@@ -64,7 +64,7 @@
 		\subsection{Matrix diagram}
 			\begin{figure}[!htb]
 				\centering
-				\includegraphics[scale=0.45]{matrixDia.png}
+				\includegraphics[width=19cm, height = 10cm]{matrixDia.png}
 				\caption{Matrix diagram}
 				\label{fig:Reinforcement}
 			\end{figure}
@@ -136,10 +136,9 @@
 		\subsection{Normalizácia}
 			Všetky naše tabuľky sú navrhnuté podľa 1., 2. aj 3. normálovej formy. Aby bola splnená prvá normálová forma, musia byť všetky 
 			atribúty entít atomické, čo znamená že napr. meno a priezvisko nebudú uchované v jednom stĺpci ale budú rozdelené do dvoch stĺpcov. 
-			Pre druhú normálovú formu musí byť splnené, že každý atribút, ktorý nieje primárnym kľúčom je na ňom úplne závislý. ??? V tretej 
-			normálovej forme je tabuľka vtedy, keď všetky jej atribúty, ktoré nie sú primárnym kľúčom, sú na sebe nezávislé. Ak by takýto atribút existoval, bolo by nutné ho presunúť do novej entity. Tretia normálova forma je dôvodom pre relatívne veľký počet entít.
+			Pre druhú normálovú formu musí byť splnené, že každý atribút, ktorý nieje primárnym kľúčom je na ňom úplne závislý. Toto platí. V tretej normálovej forme je tabuľka vtedy, keď všetky jej atribúty, ktoré nie sú primárnym kľúčom, sú na sebe nezávislé. Ak by takýto atribút existoval, bolo by nutné ho presunúť do novej entity. Tretia normálova forma je dôvodom pre relatívne veľký počet entít.
 		\subsection{Voľba a stanovenie identifikátorov, primárnych kľúčov, pre definované entity}
-			Všetky naše entity majú ako primárny kľúč ID. Spravili sme tak z dôvodu zrozumitelnejšieho a na pamäť menej náročneho prepojenia dvoch entít.
+			Všetky naše entity majú ako primárny kľúč ID. Spravili sme tak z dôvodu zrozumitelnejšieho a na pamäť menej náročneho prepojenia dvoch entít. Toto rozhodnutie nám ale skomplikovalo SELECTY, pretože pre pekný výpis musíme v každom SELECTE používať JOINY.
 		\clearpage
 		\subsection{Relačná schéma}	
 			\begin{figure}[!htb]
@@ -152,14 +151,15 @@
 		\subsection{Slovný popis návrhu}
 			\subsubsection{Dátove typy}
 				Mená sme zvolili ako dátový typ VARCHAR2 s rozsahom 12 a priezviská s rozsahom 1ý. Predpokladáme, že takýto rozsah nám bude stačiť, keďže pravdepodobne budeme pracovať so slovenskými menami.Pre názov práce, názov priestupku, názov hodnosti, názov služby a názov trestu sme použili dátový typ VARCHAR2 s rozsahom 12. \\
-				Pre úroveň stráženia použijeme dátový typ NUMBER s rozsahom 1. Keďže úrovne stráženia sa značia od 1-9, tak nám takýto rozsah bude stačiť. 
+				Pre popis priestupku sme použili VARCHAR2(50), pretože pri popise priestupku jedno slovo nestačí.\\ 
+				Pre úroveň stráženia použijeme dátový typ NUMBER s rozsahom 1. Keďže úrovne stráženia sa značia od 1-9, tak nám takýto rozsah bude stačiť. \\
 				Pre plat, počet ciel, kapacitu väzňov v bloku, obsadenosť v bloku a pre pracovné odmeny sme zvolili dátový typ NUMBER s rozsahom 5. Takýto rozsah nám bude stačiť.\\
 				Pre ID väzňa sme použili dátový typ NUMBER s rozsahom 8.
 				Pre každé iné ID sme zvolili dátový typ NUMBER s rozsahom 5 pre jasnejšiu identifikáciu a dostatočný priestor. 
 				Dátumy sa ukladajú ako reťazce pohyblivej dĺžky s maximálnym rozsahom 10 - VARCHAR2(10).
-				Čas od a čas po v typoch služieb ukladáme ako NUMBER(2,1), pretože sa tieto časy budú značiť ako napr. 6. alebo 6.5, či 12.5.\\
+				Čas od a čas po v typoch služieb ukladáme ako NUMBER(3,1), pretože sa tieto časy budú značiť ako napr. 6. alebo 6.5, či 12.5.\\
 				Pre kapacitu väzňov a obsadenosti väzňov v celách nám stačí dátový typ NUMBER s rozsahom 1, pretože žiadna cela nebude môcť obsahovať viac ako 2 väzňov, a teda ani obsadenosť nebude vyššia. 
-				Pre minimum platovej skupiny, maximum platovej skupiny a plat dozorcu budeme potrebovať dátový typ NUMBER(5,2), teda NUMBER s rozsahom 5 číslic a s presnoťou 2 desatinným miestach. Keďže plat môže byť aj napr. 540,55.
+				Pre minimum platovej skupiny, maximum platovej skupiny a plat dozorcu budeme potrebovať dátový typ NUMBER(5), teda NUMBER s rozsahom 5 číslic, pretože keďže sme slovenská väznica tak plat nikdy nebude vyšší ako 99 999/mesiac.
 			\subsubsection{Určenie DEFAULT hodnôt pre stĺpce}
 				Zadanie defaultnej hodnoty má zmysel pri vytváraní nového väzňa, kde za dátum uväznenia zadáme aktuálny dátum, získaný funkciou SYSDATE.\\
 				Takisto aj dátum priestupku sa bude riešiť rovnakým spôsobom, a teda defaultnov hodnotou bude deň pripísania priestupku.
