@@ -19,8 +19,10 @@
 \contentsline {subsubsection}{\numberline {5.1.1}D\IeC {\'a}tove typy}{10}{subsubsection.5.1.1}
 \contentsline {subsubsection}{\numberline {5.1.2}Ur\IeC {\v c}enie DEFAULT hodn\IeC {\^o}t pre st\IeC {\'l}pce}{10}{subsubsection.5.1.2}
 \contentsline {subsubsection}{\numberline {5.1.3}Obmedzenia}{10}{subsubsection.5.1.3}
-\contentsline {subsection}{\numberline {5.2}Fyzick\IeC {\'y} model}{10}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Preh\IeC {\v l}ad potrebn\IeC {\'y}ch SQL dopytov}{10}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Vkladanie \IeC {\'u}dajov do tabuliek, zmena hodn\IeC {\^o}t st\IeC {\'l}pcov}{10}{subsubsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.2}Vymaz\IeC {\'a}vanie \IeC {\'u}dajov}{11}{subsubsection.5.3.2}
-\contentsline {section}{\numberline {6}Z\IeC {\'a}ver}{11}{section.6}
+\contentsline {subsubsection}{\numberline {5.1.4}S\IeC {\'u}hrnn\IeC {\'e} inform\IeC {\'a}cie o tabu\IeC {\v l}k\IeC {\'a}ch pou\IeC {\v z}it\IeC {\'y}ch v n\IeC {\'a}vrhu}{11}{subsubsection.5.1.4}
+\contentsline {subsection}{\numberline {5.2}Fyzick\IeC {\'y} model}{12}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Preh\IeC {\v l}ad potrebn\IeC {\'y}ch SQL dopytov}{13}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Vkladanie \IeC {\'u}dajov do tabuliek, zmena hodn\IeC {\^o}t st\IeC {\'l}pcov}{13}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}Zmena \IeC {\'u}dajov}{13}{subsubsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.3}Vymaz\IeC {\'a}vanie \IeC {\'u}dajov}{13}{subsubsection.5.3.3}
+\contentsline {section}{\numberline {6}Z\IeC {\'a}ver}{13}{section.6}
