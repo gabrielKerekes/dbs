@@ -47,30 +47,21 @@
 		prehľady, atď.
 	\section{Kocneptuálna úroveň}
 		\subsection{Entity}
-			Entity sme vyberali na základe toho aké údaje budeme potrebovať ukladať. Začali sme s entitami VÄZEŇ, DOZORCA, CELA.\\ Entita VÄZEŇ 
-			slúži na uchovávanie informácií o väzňoch, DOZORCA na uchovávanie údajov o dozorcoch a CELA informácie o celách. Pri navrhovaní 
-			entity VÄZEŇ sme boli donutení vytvoriť ďaľšie entity súvisiace s väzňami. Sú to PRÁCA, ZÁVAŽNOSŤ TRESTU, PRIESTUPOK, POŠTA. PRÁCA 
-			je entita, ktorá má v sebe uložené všetky práce, ktoré väzni môžu vykonávať. ZÁVAŽNOSŤ TRESTU má v sebe uložené závažnosti trestov 
-			aj s ichpopisom. PRIESTUPOK ukladá informácie o priestupkoch vykonaných väzňami. POŠTA ukladá informácie o pošte, ktorý väzni 
-			prijali alebo odoslali. Rovnako k entite DOZORCA sme museli vytvoriť entity HODNOSŤ, BLOK, SLUŽBA. HODNOSŤ je tabuľka uchovávajúca 
-			všetky hodnosti, ktoré môže dozorca dosiahnuť. Dozorca pracuje v určitom čase iba v jednom bloku. Všetky bloky väznice musia byť 
-			niekde uložené. Preto sme vytvorili entitu BLOK, aby sme vedeli určit v akom bloku dozorca pracujem, alebo v akom bloku sa nachádza 
-			cela. Entita SLUŽBA ukladá všetky služby, ktoré dozorca mal, alebo ešte len bude mať. Na určenie o akú službu sa jedná sme 
-			vytvorili entitut TYP$\_$SLUŽBY aby sa typ služby určoval jednoduchšie.
+			Entity sme vyberali na základe toho aké údaje budeme potrebovať ukladať. Začali sme s entitami \textbf{VÄZEŇ}, \textbf{DOZORCA}, \textbf{CELA}.\\ Entita \textbf{VÄZEŇ} slúži na uchovávanie informácií o väzňoch, \textbf{DOZORCA} na uchovávanie údajov o dozorcoch a \textbf{CELA} informácie o celách. Pri navrhovaní entity \textbf{VÄZEŇ} sme boli donutení vytvoriť ďaľšie entity súvisiace s väzňami. Sú to \textbf{PRÁCA}, \textbf{ZÁVAŽNOSŤ TRESTU}, \textbf{PRIESTUPOK}, \textbf{POŠTA}. \textbf{PRÁCA} je entita, ktorá má v sebe uložené všetky práce, ktoré väzni môžu vykonávať. \textbf{ZÁVAŽNOSŤ TRESTU} má v sebe uložené závažnosti trestov aj s ichpopisom. \textbf{PRIESTUPOK} ukladá informácie o priestupkoch vykonaných väzňami. \textbf{POŠTA} ukladá informácie o pošte, ktorý väzni prijali alebo odoslali. Rovnako k entite \textbf{DOZORCA} sme museli vytvoriť entity \textbf{HODNOSŤ}, \textbf{BLOK}, \textbf{SLUŽBA}. \textbf{HODNOSŤ} je tabuľka uchovávajúca všetky hodnosti, ktoré môže dozorca dosiahnuť. Dozorca pracuje v určitom čase iba v jednom bloku. Všetky bloky väznice musia byť niekde uložené. Preto sme vytvorili entitu \textbf{BLOK}, aby sme vedeli určit v akom bloku dozorca pracujem, alebo v akom bloku sa nachádza cela. Entita \textbf{SLUŽBA} ukladá všetky služby, ktoré dozorca mal, alebo ešte len bude mať. Na určenie o akú službu sa jedná sme vytvorili entitut \textbf{TYP$\_$SLUŽBY} aby sa typ služby určoval jednoduchšie.
 		\subsection{Atribúty}
 			Atribúty sú vlastnosti entít. Zvolili sme ich následovne po diskusii so zákazníkom: \\
-			VÄZEŇ - id, meno, priezvisko, cela, datum prijatia, datum prepustenia, priestupok, zavaznost trestu, praca\\
-			ZÁVAŽNOSŤ TRESTU - id, nazov\\
-			PRIESTUPOK - id, id väzňa, dátum, popis\\
-			PRÁCA - id, názov, odmena\\
-			POŠTA - id, id väzňa, cinnost\\
-			DOZORCA - id, meno, priezvisko, blok, hodnosť, plat \\
-			HODNOSŤ - id, nazov, platová skupina\\
-			PLATOVÁ SKUPINA - id, minimálny plat, maximálny plat\\
-			BLOK - id, názov bloku, počet ciel, kapacita, obsadenosť, úroveň stráženia\\
-			CELA - id, kapacita, obsadenosť\\
-			SLUŽBA - id, id dozorcu, id typu sluzby\\
-			TYP SLUŽBY - id, nazov sluzby, cas od, cas do\\
+			\textbf{VÄZEŇ} - id, meno, priezvisko, cela, datum prijatia, datum prepustenia, priestupok, \\ závažnosť trestu, práca\\
+			\textbf{ZÁVAŽNOSŤ TRESTU} - id, nazov\\
+			\textbf{PRIESTUPOK} - id, id väzňa, dátum, popis\\
+			\textbf{PRÁCA} - id, názov, odmena\\
+			\textbf{POŠTA} - id, id väzňa, cinnost\\
+			\textbf{DOZORCA} - id, meno, priezvisko, blok, hodnosť, plat \\
+			\textbf{HODNOSŤ} - id, nazov, platová skupina\\
+			\textbf{PLATOVÁ SKUPINA} - id, minimálny plat, maximálny plat\\
+			\textbf{BLOK} - id, názov bloku, počet ciel, kapacita, obsadenosť, úroveň stráženia\\
+			\textbf{CELA} - id, kapacita, obsadenosť\\
+			\textbf{SLUŽBA} - id, id dozorcu, id typu sluzby\\
+			\textbf{TYP SLUŽBY} - id, nazov sluzby, cas od, cas do\\
 		\subsection{Matrix diagram}
 			\begin{figure}[!htb]
 				\centering
@@ -81,39 +72,50 @@
 		\subsection{Vzťahy medzi entitami}
 			\textbf{Väzeň - Práca} \\
 				Kardinalita: N:1 Jednu prácu môže vykonávať viac väzňov, avšak väzeň môže vykonávať iba jednu prácu v daný čas.\\
-				Parcialita: Väzeň nemusí vykonávať žiadnu prácu, avšak práca musí byť vykonávaná nejakým väzňom.\\ \\
+				Parcialita: Väzeň nemusí vykonávať žiadnu prácu, avšak práca musí byť vykonávaná nejakým väzňom.\\ 
+				Transferabilita: Väzňovi môže byť práca hocikedy zmenená a takisto aj práca môže byť vykonávaná inými väzňami.\\ \\
 			\textbf{Väzeň - Závažnosť trestu} \\
 				Kardinalita: N:1 Jeden typ závažnosti trestu môže mať viac väzňov, avšak väzeň môže mať iba jeden typ závažnosti trestu. \\
-				Parcialita: Väzeň musí mať nejaký typ závažnosti trestu, avšak závažnosť trestu nemusí prislúchať nejakému väzňovi.\\ \\
+				Parcialita: Väzeň musí mať nejaký typ závažnosti trestu, avšak závažnosť trestu nemusí prislúchať nejakému väzňovi.\\ 
+				Transferabilita: Závažnosť trestu väzňa sa nemôže meniť.\\ \\
 			\textbf{Väzeň - Priestupok} \\
 				Kardinalita: 1:N Jeden priestupok bude zaznamenaný pre jedného väzňa, a jeden väzeň mohol spáchať viacej priestupkov.
 				\\
-				Parcialita: Väzeň nemusí spáchať priestupok, avšak priestupok musí mať svojho vinníka.\\ \\
+				Parcialita: Väzeň nemusí spáchať priestupok, avšak priestupok musí mať svojho vinníka.\\ 
+				Transferabilita: Po vykonaní priestupku sa už väzeň, ktorý ho vykonal meniť nemôže.\\ \\
 			\textbf{Väzeň - Pošta} \\
 				Kardinalita: 1:N Poštu môže odoslať/prijímať len jeden väzeň, avšak viac väzňov môže odoslať/prijímať poštu.\\
-				Parcialita: Väzeň nemusí odosielať/prijímať pošty, avšak pošta musí mať svojho odosielateľa/prijímateľa.\\ \\
+				Parcialita: Väzeň nemusí odosielať/prijímať pošty, avšak pošta musí mať svojho odosielateľa/prijímateľa.\\ 
+				Transferabilita: Pošta, ktorá už bola odoslaná/prijatá svojho odosielateľa/príjemcu nezmení.\\ \\
 			\textbf{Väzeň - Cela} \\
 				Kardinalita: N:1 Cela môže ubytovávať viacerých väzňov, avšak väzeň môže byť ubytovaný len v jednej cele. \\
-				Parcialita: Väzeň musí byť ubytovaný v cele, avšak cela nemusí ubytovávať žiadneho väzňa.\\ \\
+				Parcialita: Väzeň musí byť ubytovaný v cele, avšak cela nemusí ubytovávať žiadneho väzňa.\\ 
+				Transferabilita: Väzeň môže byť presúvaný medzi celami.\\ \\
 			\textbf{Dozorca - Hodnosť} \\
 				Kardinalita: N:1 Jednu hodnosť môže mať viacero dozorcov, avšak jeden dozorca môže mať len jednu hodnosť.\\
-				Parcialita: Dozorca musí mať hodnosť, a taktiež hodnosť musí prislúchať nejakému dozorcovi.\\ \\
-			\textbf{Dozorca - Blok} \\ \\
+				Parcialita: Dozorca musí mať hodnosť, a taktiež hodnosť musí prislúchať nejakému dozorcovi.\\ 
+				Transferabilita: Dozorca môže byť povýšený.\\ \\
+			\textbf{Dozorca - Blok} \\
 				Kardinalita: N:1 Blok môže byť strážený viacerými dozorcami, avšak dozorca môže strážiť len jeden blok naraz.\\
-				Parcialita: Dozorca musí strážiť nejaký blok, avšak blok nemusí byť strážený žiadnym dozorcom.\\ \\
+				Parcialita: Dozorca musí strážiť nejaký blok, avšak blok nemusí byť strážený žiadnym dozorcom.\\ 
+				Transferabilita: Dozorca môže byť preradený na iný blok.\\ \\
 			\textbf{Dozorca - Služba} \\
 				Kardinalita: 1:N Jedna služba môže prislúchať len jednému dozorcovi, avšak jeden dozorca môže mať viacero služieb.\\
-				Parcialita: Dozorca musí byť prihlásený na službu a služba musí mať svojho vykonávateľa.\\ \\
+				Parcialita: Dozorca musí byť prihlásený na službu a služba musí mať svojho vykonávateľa.\\ 
+				Transferabilita: Už existujúca služba môže zmeniť svojho vykonávateľa (napr. keď dozorca ochorie)\\ \\
 			\textbf{Hodnosť - Platová skupina} \\
 				Kardinalita: N:1 Jedna platová skupina môže obsahovať viacero hodností, avšak jedna hodnosť môže byť len v jednej platovej 
 				skupine.\\
-				Parcialita: Hodnosť musí byť zapísaná v nejakej platovej skupine, a taktiež platová skupina musí obsahovať nejakú hodnosť.\\ \\
+				Parcialita: Hodnosť musí byť zapísaná v nejakej platovej skupine, a taktiež platová skupina musí obsahovať nejakú hodnosť.\\ 
+				Transferabilita: Hodnosť bude vždy patriť do tej istej platovej skupiny. (platová skupina by sa mohla zmeniť iba pri väčších organizačných zmenách, ktoré zanedbáme).\\ \\
 			\textbf{Blok - Cela} \\
 				Kardinalita: 1:N Jedna cela môže byť len v jednom bloku, avšak jeden blok môže obsahovať viacero ciel.\\
-				Parcialita: Blok musí obsahovať celu, a taktiež cela musí byť v nejakom bloku.\\ \\
+				Parcialita: Blok musí obsahovať celu, a taktiež cela musí byť v nejakom bloku.\\ 
+				Transferabilita: Cela blok len tak nezmení.\\ \\
 			\textbf{Služba - Typ služby} \\
 				Kardinalita: N:1 Jeden typ služby môže mať viacero služieb, avšak jedna služba môže byť len jedným typom služby.\\
-				Parcialita: Služba musí byť nejakým typom služby, avšak typ služby nemusí mať žiadnu službu.\\ \\
+				Parcialita: Služba musí byť nejakým typom služby, avšak typ služby nemusí mať žiadnu službu.\\ 
+				Transferabilita: Služba typ služby nezmení, môžu sa vymeniť iba vykonávatelia služby.\\ \\
 		\clearpage
 		\subsection{ERA diagram}
 			\begin{figure}[!htb]
@@ -139,12 +141,10 @@
 			Všetky naše tabuľky sú navrhnuté podľa 1., 2. aj 3. normálovej formy. Aby bola splnená prvá normálová forma, musia byť všetky 
 			atribúty entít atomické, čo znamená že napr. meno a priezvisko nebudú uchované v jednom stĺpci ale budú rozdelené do dvoch stĺpcov. 
 			Pre druhú normálovú formu musí byť splnené, že každý atribút, ktorý nieje primárnym kľúčom je na ňom úplne závislý. ??? V tretej 
-			normálovej forme je tabuľka vtedy, keď všetky jej atribúty, ktoré nie sú primárnym kľúčom
+			normálovej forme je tabuľka vtedy, keď všetky jej atribúty, ktoré nie sú primárnym kľúčom, sú na sebe nezávislé. Ak by takýto atribút existoval, bolo by nutné ho presunúť do novej entity. Tretia normálova forma je dôvodom pre relatívne veľký počet entít.
 		\subsection{Voľba a stanovenie identifikátorov, primárnych kľúčov, pre definované entity}
-			Ako identifikátory môžeme zvoliť atribút, kombináciu atribútov alebo zaviesť nový atribút,
-			ktorý slúži iba ako jedinečný identifikátor každého riadku. Zvolili sme práve tretiu možnosť a ku všetkým naším entitám pridáme 
-			primárny kľúč ID.		
-			\clearpage
+			Všetky naše entity majú ako primárny kľúč ID. Spravili sme tak z dôvodu zrozumitelnejšieho a na pamäť menej náročneho prepojenia dvoch entít.
+		\clearpage
 		\subsection{Relačná schéma}	
 			\begin{figure}[!htb]
 				\centering
