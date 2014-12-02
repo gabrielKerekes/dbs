@@ -59,7 +59,7 @@
 			\textbf{PLATOVÁ SKUPINA} - id, minimálny plat, maximálny plat\\
 			\textbf{BLOK} - id, názov bloku, počet ciel, kapacita, obsadenosť, úroveň stráženia\\
 			\textbf{CELA} - id, kapacita, obsadenosť\\
-			\textbf{SLUŽBA} - id, id dozorcu, id typu sluzby\\
+			\textbf{SLUŽBA} - id, id dozorcu, id typu sluzby, dátum\\
 			\textbf{TYP SLUŽBY} - id, nazov sluzby, cas od, cas do\\
 		\subsection{Matrix diagram}
 			\begin{figure}[!htb]
@@ -165,9 +165,6 @@
 				Takisto aj dátum priestupku sa bude riešiť rovnakým spôsobom, a teda defaultnov hodnotou bude deň pripísania priestupku.
 				Pre atribút práca, v entite väzeň, môžeme zadať defaultnú hodnotu NULL, pretože tento atribúť zmeníme, až keď mu dozorcovia pridelia prácu. \\
 				Pre obsadenosť bloku a obsadenosť ciel môžeme zadať defaultnú hodnotu NULL, pretože hneď po vytvorení v bloku nie je žiaden väzeň a takisto pri vytvorení cely nie je v cele žiaden väzeň. 
-			\subsubsection{Obmedzenia}
-				Nutnosť vyplnenia atribútom sme zabezpečili zakázaním NULL hodnoty tohto atribútu. 
-				........ KONTROLA KAPACIIIIIIIT
 			\clearpage
 			\subsubsection{Súhrnné informácie o tabuľkách použitých v návrhu}
 				\begin{figure}[!htb]
@@ -200,18 +197,41 @@
 				WHERE ID = 27;\\
 				\\
 				UPDATE BLOKY\\
-				SET KAPACITA = KAPACITA + 1\\
-				WHERE ID = (SELECT c.BLOK from CELY c WHERe c.ID = 27);\\
+				SET KAPACITA$\_$VAZNOV = KAPACITA$\_$VAZNOV + 1\\
+				WHERE ID = (SELECT c.BLOK FROM CELY c WHERE c.ID = 27);\\
 				\\
 				Odmena práce "Zametac" sa zmenila z pôvodnej sumy na 120. V databáze treba upraviť odmenu v tabuľke PRÁCE\\
 				\\
 				UPDATE PRACE\\
 				SET ODMENA = 120\\
 				WHERE NAZOV = 'Zametac';\\
-
 			\subsubsection{Vymazávanie údajov}
-				
-
+				Chceme vymazať väzňa s ID 25, treba však uvoľniť miesto v jeho cele, tým pádom sa uvoľní miesto aj v celom bloku.
+				Najprv treba ale uvoľniť miesto v bloku a v jeho cele. Kebyže najprv vymažeme väzňa, potom by sme nevedeli v akej cele sa nachádzal. \\
+				\\
+				UPDATE BLOKY\\
+				SET OBSADENOST = OBSADENOST - 1\\
+				WHERE ID = (SELECT c.BLOK FROM CELY c WHERE c.ID = (SELECT v.CELA FROM VAZNI v WHERE v.ID = 25));\\
+				\\
+				UPDATE CELY\\
+				SET OBSADENOST = OBSADENOST - 1\\
+				WHERE ID = (SELECT v.CELA FROM VAZNI v WHERE v. ID = 25);\\
+				\\
+				DELETE VAZNI\\
+				WHERE ID = 25;\\
+				\\
+				Dajme tomu, že chceme odstrániť celu s ID 12, v ktorej nikto nie je. Okrem vymazania cely, treba znížiť pocet ciel v bloku, a tým pádom aj kapacitu väzňov, v ktorom sa cela nachádza. Najprv treba znížiť počeť ciel v bloku a kapacitu väzňov, a až potom môžeme vymazať celu, pretože ak by sme najprv vymazali celu, nevedeli by sme, v akom bloku sa nachádzala.\\
+				\\
+				UPDATE BLOKY\\
+				SET KAPACITA$\_$VAZNOV = KAPACITA$\_$VAZNOV - (SELECT c.KAPACITA FROM CELY c WHERE c.ID = 12)\\
+				WHERE ID = (SELECT c.BLOK FROM CELY c WHERE c.ID = 12);\\
+				\\
+				UPDATE BLOKY\\
+				SET POCET$\_$CIEL = POCET$\_$CIEL - 1\\
+				WHERE ID = (SELECT c.BLOK FROM CELY c WHERE c.ID = 12);\\
+				\\
+				DELETE CELY\\
+				WHERE ID = 12;\\
 	\section{Záver}
 
 \end{document}
