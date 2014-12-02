@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.13)  2 DEC 2014 12:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.13)  2 DEC 2014 14:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -452,6 +452,9 @@ LaTeX Warning: Label `fig:Reinforcement' multiply defined.
 
 LaTeX Warning: Label `fig:Reinforcement' multiply defined.
 
+
+LaTeX Warning: Label `fig:Reinforcement' multiply defined.
+
 )
 \openout1 = `semestralka.aux'.
 
@@ -615,7 +618,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--64
 
 [3
 
-] <matrixDia.png, id=172, 1168.365pt x 479.7925pt>
+] <matrixDia.png, id=178, 1168.365pt x 479.7925pt>
 File: matrixDia.png Graphic file (type png)
  <use matrixDia.png>
 Package pdftex.def Info: matrixDia.png used on input line 67.
@@ -709,7 +712,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--115
 
 [5
 
-] [6] <ERAdia.png, id=186, 666.49pt x 873.2625pt>
+] [6] <ERAdia.png, id=192, 666.49pt x 873.2625pt>
 File: ERAdia.png Graphic file (type png)
  <use ERAdia.png>
 Package pdftex.def Info: ERAdia.png used on input line 119.
@@ -754,7 +757,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 144.
 
-<relacnyDia.png, id=199, 666.49pt x 873.2625pt>
+<relacnyDia.png, id=205, 666.49pt x 873.2625pt>
 File: relacnyDia.png Graphic file (type png)
  <use relacnyDia.png>
 Package pdftex.def Info: relacnyDia.png used on input line 147.
@@ -783,57 +786,87 @@ Package hyperref Warning: Composite letter `\textacute+l'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textacute' on input line 163.
 
+[10] <fyzDia.png, id=216, 878.28125pt x 801.99625pt>
+File: fyzDia.png Graphic file (type png)
+ <use fyzDia.png>
+Package pdftex.def Info: fyzDia.png used on input line 175.
+(pdftex.def)             Requested size: 526.97282pt x 481.20145pt.
+
+Overfull \hbox (13.85538pt too wide) in paragraph at lines 175--176
+ [][] 
+ []
+
+[11
+
+ <./fyzDia.png>]
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 172.
+(hyperref)                removing `\textasciicaron' on input line 180.
 
 
 Package hyperref Warning: Composite letter `\textacute+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textacute' on input line 173.
+(hyperref)                removing `\textacute' on input line 181.
 
 
-Overfull \hbox (3.64973pt too wide) in paragraph at lines 174--186
+Overfull \hbox (3.64973pt too wide) in paragraph at lines 182--194
 \OT1/cmr/m/n/12 INSERT INTO VAZNI VA-LUES(10000,'Ferko','Mrkvcicka',default,'12
 /10/2022',10,default,default,5); 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--186
+Underfull \hbox (badness 10000) in paragraph at lines 182--194
 
  []
 
-[10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 189.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 189.
+
+Package hyperref Warning: Composite letter `\textasciicaron+l'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 194.
+
+
+Overfull \hbox (3.64973pt too wide) in paragraph at lines 195--207
+\OT1/cmr/m/n/12 INSERT INTO VAZNI VA-LUES(10000,'Ferko','Mrkvcicka',default,'12
+/10/2022',10,default,default,5); 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--207
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 210.
+[12
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
  (./semestralka.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 189.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 189.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 210.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
 Package rerunfilecheck Info: File `semestralka.out' has not changed.
-(rerunfilecheck)             Checksum: D97DF682D3C433BEA824434ABB7134EF;1805.
+(rerunfilecheck)             Checksum: 0C06E84D34D227A86CD2930A6D356C6A;1935.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 189.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
  ) 
 Here is how much of TeX's memory you used:
- 6518 strings out of 493304
- 93896 string characters out of 6139870
- 196445 words of memory out of 5000000
- 9870 multiletter control sequences out of 15000+600000
+ 6527 strings out of 493304
+ 94020 string characters out of 6139870
+ 196443 words of memory out of 5000000
+ 9875 multiletter control sequences out of 15000+600000
  8545 words of font info for 30 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  29i,11n,43p,1499b,337s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on semestralka.pdf (11 pages, 222672 bytes).
+Output written on semestralka.pdf (12 pages, 274377 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 41 named destinations out of 1000 (max. 500000)
- 216 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 253 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 229 words of extra memory for PDF output out of 10000 (max. 10000000)
 
