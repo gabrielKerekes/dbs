@@ -213,31 +213,33 @@
 				WHERE NAZOV = 'Zametac';\\
 			\subsubsection{Vypisovanie hodnôt tabulky}
 				Vypíše celú tabuľku:\\
-				SELECT * FROM NAZOV$\_$TABULKY;\\
+				SELECT * FROM NAZOV$\_$TABULKY;\\ \\
 				Vypíše počet všetkých väzňov, ktorý vo väzení kedy boli:\\
-				SELECT COUNT(*) FROM VAZNI;\\
+				SELECT COUNT(*) FROM VAZNI;\\ \\
 				Vypíše aktuálny počet väzňov:\\
-				SELECT COUNT(*) FROM VAZNI WHERE DATUM$\_$PREPUSTENIA $<$ SYSDATE();\\
+				SELECT COUNT(*) FROM VAZNI \\ WHERE DATUM$\_$PREPUSTENIA $<$ SYSDATE();\\ \\
 				Vypíše všetku poštu spojenú s väzňom:\\
-				SELECT * FROM POSTY WHERE ID$\_$VAZNA = id$\_$ktore$\_$chcem$\_$najst;\\
+				SELECT * FROM POSTY \\ WHERE ID$\_$VAZNA = id$\_$ktore$\_$chcem$\_$najst;\\ \\
 				Vypíše počet prijatej pošty väzňa:\\
-				SELECT COUNT(*) FROM POSTY WHERE ID$\_$VAZNA = id$\_$ktore$\_$chceme AND CINNOST = 'PRIJAL';\\
+				SELECT COUNT(*) FROM POSTY \\ WHERE ID$\_$VAZNA = id$\_$ktore$\_$chceme \\ AND CINNOST = 'PRIJAL';\\ \\
 				Vypíše počet odoslanej pošty väzňa:\\
-				SELECT COUNT(*) FROM POSTY WHERE ID$\_$VAZNA = id$\_$ktore$\_$chceme AND CINNOST = 'ODOSLAL';\\
+				SELECT COUNT(*) FROM POSTY \\ WHERE ID$\_$VAZNA = id$\_$ktore$\_$chceme \\ AND CINNOST = 'ODOSLAL';\\ \\
 				Vypíše všetkých väzňov z bloku xyz:\\
-				SELECT * FROM VAZNI a JOIN CELY c ON a.CELY = c.ID WHERE a.BLOK = xyz;\\
+				SELECT * FROM VAZNI a \\ JOIN CELY c ON a.CELY = c.ID \\ WHERE a.BLOK = xyz;\\ \\
 				Vypíše všetkých dozorcov z bloku xyz:\\
-				SELECT * FROM DOZORCOVIA WHERE BLOK = xyz;\\
+				SELECT * FROM DOZORCOVIA \\ WHERE BLOK = xyz;\\ \\
 				Vypíše priestupky väzňa:\\
-				SELECT * FROM PRIESTUPKY WHERE ID$\_$VAZNA = xyz;\\
+				SELECT * FROM PRIESTUPKY \\ WHERE ID$\_$VAZNA = xyz;\\ \\
 				Vypíše všetky služby dozorcu xyz:\\
-				SELECT * FROM SLUZBY WHERE ID$\_$DOZORCU = xyz;\\
+				SELECT * FROM SLUZBY \\ WHERE ID$\_$DOZORCU = xyz;\\ \\
 				Vypíše všetky budúce služby dozorcu xyz:\\
-				SELECT * FROM SLUZBY WHERE ID$\_$DOZORCU = xyz AND DATUM > SYSDATE();\\
+				SELECT * FROM SLUZBY \\ WHERE ID$\_$DOZORCU = xyz AND DATUM > SYSDATE();\\ \\
 				Vypíše všetky cely s voľným miestom:\\
-				SELECT * FROM CELY WHERE KAPACIA > OBSADENOST;\\
+				SELECT * FROM CELY \\ WHERE KAPACIA > OBSADENOST;\\ \\
 				Vypíše súčet mesačných platov dozorcov:\\
-				SELECT SUM(PLAT) FROM DOZORCOVIA;\\
+				SELECT SUM(PLAT) FROM DOZORCOVIA;\\ \\
+				Vypíše služby dozorcov s menom dozorcov a nazvom sluzby:\\
+				SELECT d.MENO, d.PRIEZVISKO, t.NAZOV$\_$SLUZBY, DATUM FROM SLUZBY s, DOZORCOVIA d, TYPY$\_$SLUZIEB t \\ WHERE s.ID$\_$DOZORCU = d.ID AND t.ID = s.ID$\_$TYPU$\_$SLUZBY;\\ \\
 			\subsubsection{Vymazávanie údajov}
 				Chceme vymazať väzňa s ID 25, treba však uvoľniť miesto v jeho cele, tým pádom sa uvoľní miesto aj v celom bloku.
 				Najprv treba ale uvoľniť miesto v bloku a v jeho cele. Kebyže najprv vymažeme väzňa, potom by sme nevedeli v akej cele sa nachádzal. \\
