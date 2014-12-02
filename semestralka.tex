@@ -99,11 +99,11 @@
 			\textbf{Dozorca - Blok} \\
 				Kardinalita: N:1 Blok môže byť strážený viacerými dozorcami, avšak dozorca môže strážiť len jeden blok naraz.\\
 				Parcialita: Dozorca musí strážiť nejaký blok, avšak blok nemusí byť strážený žiadnym dozorcom.\\ 
-				Transferabilita: Dozorca môže byť preradený na iný blok.\\ \\
+				Transferabilita: Dozorca môže byť preradený na iný blok.\\ \\ \clearpage
 			\textbf{Dozorca - Služba} \\
 				Kardinalita: 1:N Jedna služba môže prislúchať len jednému dozorcovi, avšak jeden dozorca môže mať viacero služieb.\\
 				Parcialita: Dozorca musí byť prihlásený na službu a služba musí mať svojho vykonávateľa.\\ 
-				Transferabilita: Už existujúca služba môže zmeniť svojho vykonávateľa (napr. keď dozorca ochorie)\\ \\
+				Transferabilita: Už existujúca služba môže zmeniť svojho vykonávateľa (napr. keď dozorca ochorie)\\ \\ 
 			\textbf{Hodnosť - Platová skupina} \\
 				Kardinalita: N:1 Jedna platová skupina môže obsahovať viacero hodností, avšak jedna hodnosť môže byť len v jednej platovej 
 				skupine.\\
@@ -238,9 +238,9 @@
 				Vypíše všetky služby dozorcu xyz:\\
 				SELECT * FROM SLUZBY \\ WHERE ID$\_$DOZORCU = xyz;\\ \\
 				Vypíše všetky budúce služby dozorcu xyz:\\
-				SELECT * FROM SLUZBY \\ WHERE ID$\_$DOZORCU = xyz AND DATUM > SYSDATE();\\ \\
+				SELECT * FROM SLUZBY \\ WHERE ID$\_$DOZORCU = xyz AND DATUM $>$ SYSDATE();\\ \\
 				Vypíše všetky cely s voľným miestom:\\
-				SELECT * FROM CELY \\ WHERE KAPACIA > OBSADENOST;\\ \\
+				SELECT * FROM CELY \\ WHERE KAPACITA $>$ OBSADENOST;\\ \\
 				Vypíše súčet mesačných platov dozorcov:\\
 				SELECT SUM(PLAT) FROM DOZORCOVIA;\\ \\
 				Vypíše služby dozorcov s menom dozorcov a nazvom sluzby:\\
